@@ -111,8 +111,6 @@ public class LauncherBehavior implements Initializable {
         String data = (String) node.getUserData();
         int dir = Integer.parseInt(data);
 
-        animateToScrollPos(scroller,sourceIndex);
-
         sourceIndex += dir;
 
         if (sourceIndex >= appCount){
@@ -120,6 +118,8 @@ public class LauncherBehavior implements Initializable {
         }else if (sourceIndex < 0){
             sourceIndex = appCount - 1;
         }
+
+        animateToScrollPos(scroller,sourceIndex);
     }
 
 
