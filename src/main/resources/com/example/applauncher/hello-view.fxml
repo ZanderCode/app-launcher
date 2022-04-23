@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<HBox fx:id="body" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.applauncher.LauncherBehavior" stylesheets="@style.css">
+
+    <HBox fx:id="main" alignment="CENTER" xmlns:fx="http://javafx.com/fxml">
+        <VBox fx:id="left" alignment="CENTER_LEFT" onMouseClicked="#onImageClick" userData="-1"><Label text="left"></Label></VBox>
+        <ScrollPane fx:id="scroller">
+            <HBox fx:id="allApps">
+                <VBox>
+                    <ImageView fx:id="apps"></ImageView>
+                    <Label>App Title</Label>
+                    <Label maxWidth="500" wrapText="true">App Description that serves a basic understanding of what the app acheives. Blah Blah</Label>
+                </VBox>
+                <VBox><ImageView fx:id="apps2"></ImageView><Label>Title</Label></VBox>
+                <VBox><ImageView fx:id="apps3"></ImageView><Label>Title</Label></VBox>
+                <VBox><ImageView fx:id="apps4"></ImageView><Label>Title</Label></VBox>
+
+            </HBox>
+        </ScrollPane>
+        <VBox fx:id="right" alignment="CENTER_LEFT" onMouseClicked="#onImageClick" userData="1"><Label text="right"></Label></VBox>
+    </HBox>
+</HBox>
